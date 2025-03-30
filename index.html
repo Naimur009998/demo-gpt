@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn Cash | Premium Money Earning Site</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-blob {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: rotateBlob 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotateBlob {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 10%;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #f8d56b, #ff9a9e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-login {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            margin-right: 15px;
+        }
+
+        .btn-login:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-premium {
+            background: linear-gradient(90deg, #f8d56b, #ff9a9e);
+            color: #000;
+            box-shadow: 0 5px 15px rgba(248, 213, 107, 0.4);
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(248, 213, 107, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #fff, #f8d56b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 5%;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-blob"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">EarnCash</div>
+        <div>
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="signup.html" class="btn btn-premium">Sign Up</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Earn Money Online</h1>
+        <p>Complete simple tasks, take surveys, and withdraw your earnings via PayPal, Paytm or Bank Transfer.</p>
+        
+        <div class="glass-card">
+            <h2 style="margin-bottom: 20px; text-align: center;">Login to Your Account</h2>
+            <form>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-premium" style="width: 100%;">Continue</button>
+            </form>
+            <p style="text-align: center; margin-top: 20px;">Don't have an account? <a href="signup.html" style="color: #f8d56b; text-decoration: none;">Sign up here</a></p>
+        </div>
+    </section>
+</body>
+</html>
