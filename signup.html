@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | EarnCash</title>
+    <style>
+        /* === Shared Styles (Same as Homepage) === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .bg-blob {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: rotateBlob 20s linear infinite;
+            z-index: -1;
+        }
+        @keyframes rotateBlob {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 10%;
+        }
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #f8d56b, #ff9a9e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-login {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            margin-right: 15px;
+        }
+        .btn-login:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .btn-premium {
+            background: linear-gradient(90deg, #f8d56b, #ff9a9e);
+            color: #000;
+            box-shadow: 0 5px 15px rgba(248, 213, 107, 0.4);
+        }
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(248, 213, 107, 0.6);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .form-group input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .text-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* === Signup Page Specific Styles === */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .social-signup {
+            margin-top: 25px;
+            text-align: center;
+        }
+        .social-signup p {
+            margin-bottom: 15px;
+            position: relative;
+            color: rgba(255,255,255,0.8);
+        }
+        .social-signup p::before,
+        .social-signup p::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 30%;
+            background: rgba(255,255,255,0.3);
+            top: 50%;
+        }
+        .social-signup p::before { left: 0; }
+        .social-signup p::after { right: 0; }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-icons a {
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            transition: all 0.3s ease;
+        }
+        .social-icons a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-blob"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">EarnCash</div>
+        <div>
+            <a href="login.html" class="btn btn-login">Login</a>
+        </div>
+    </header>
+
+    <!-- Signup Form -->
+    <section class="hero">
+        <div class="glass-card">
+            <h2>Create Your Account</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn btn-premium" style="width:100%">Sign Up Now</button>
+            </form>
+            <p class="text-center">Already have an account? <a href="login.html" style="color:#f8d56b;">Login here</a></p>
+            
+            <!-- Social Signup -->
+            <div class="social-signup">
+                <p>Or sign up with:</p>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="30" alt="Google"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="30" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
